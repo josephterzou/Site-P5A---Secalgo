@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="hsl(187, 85%, 43%)"/>
+      <stop offset="100%" stop-color="hsl(195, 90%, 50%)"/>
+    </linearGradient>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&amp;display=swap');
+    </style>
+  </defs>
+  
+  <!-- Content Container -->
+  <g transform="translate(10, 10)">
+    <!-- 1. Icon Container: Rounded Box 40x40 -->
+    <rect width="40" height="40" rx="10" fill="url(#g)" />
+    
+    <!-- 2. Shield Icon centered in 40x40 -->
+    <!-- Icon is 24x24. Centered: (40-24)/2 = 8 margin -->
+    <g transform="translate(8, 8)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </svg>
+    </g>
+
+    <!-- 3. Text "Secalgo" -->
+    <!-- Positioned to the right of the box (40px) + gap (approx 10px) -->
+    <!-- Vertical alignment: Text is size 20px (xl). Centered roughly at y=25 (middle of 40px box) + baseline shift -->
+    <text x="50" y="27" 
+          font-family="'Inter', system-ui, sans-serif" 
+          font-weight="bold" 
+          font-size="20" 
+          fill="#1e293b"
+          dominant-baseline="middle">
+      Secalgo
+    </text>
+  </g>
+</svg>
