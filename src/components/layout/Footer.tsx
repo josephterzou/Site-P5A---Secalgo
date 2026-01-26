@@ -39,6 +39,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/faq" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                  FAQ
+                </Link>
+              </li>
+              <li>
                 <Link to="/contact" className="text-primary-foreground/70 hover:text-accent transition-colors">
                   Contact
                 </Link>
@@ -72,9 +77,12 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-primary-foreground/50">
-            © {new Date().getFullYear()} Secalgo. Tous droits réservés.
-          </p>
+          <div className="text-sm text-primary-foreground/50 flex flex-col md:flex-row gap-4 items-center">
+            <p>© {new Date().getFullYear()} Secalgo. Tous droits réservés.</p>
+            <Link to="/mentions-legales" className="hover:text-accent transition-colors">
+              Mentions Légales
+            </Link>
+          </div>
           <p className="text-sm text-primary-foreground/50">
             Hébergement 100% français — OVHcloud
           </p>

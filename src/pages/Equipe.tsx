@@ -6,19 +6,15 @@ const team = [
     name: "Eliott Perrignon",
     role: "Expert Architecture SI",
     bio: "Spécialiste en architecture des systèmes d'information, Eliott conçoit et optimise les infrastructures sécurisées pour garantir la résilience de vos systèmes face aux menaces.",
-    linkedin: "https://www.linkedin.com/in/elliot-perrignon-95a24727b/"
+    linkedin: "https://www.linkedin.com/in/elliot-perrignon-95a24727b/",
+    photo: "https://media.licdn.com/dms/image/v2/D4E03AQGXsgJoIS_szQ/profile-displayphoto-scale_200_200/B4EZl94Zg6GYAY-/0/1758753562086?e=1770854400&v=beta&t=zd4hO46OwfhKQlVXE-2HeeSflS_mTgcK3W1-bqzlxpM"
   },
   {
     name: "Nicolas Priscal",
     role: "Chef de Projet",
     bio: "Nicolas pilote l'ensemble de nos projets avec rigueur et méthode. Il assure la coordination entre les équipes et la satisfaction de nos clients tout au long de leur parcours de sécurisation.",
-    linkedin: "https://www.linkedin.com/in/nprscl/"
-  },
-  {
-    name: "Joseph Terzibachian",
-    role: "Communication & Formation",
-    bio: "Expert en communication et formation, Joseph rend la cybersécurité accessible à tous. Il conçoit et anime nos sessions de sensibilisation pour transformer vos collaborateurs en première ligne de défense.",
-    linkedin: "https://www.linkedin.com/in/joseph-terzibachian/"
+    linkedin: "https://www.linkedin.com/in/nprscl/",
+    photo: "https://media.licdn.com/dms/image/v2/D4E03AQEkxf6A1L_1sA/profile-displayphoto-scale_200_200/B4EZoxxe1mKYAc-/0/1761771647234?e=1770854400&v=beta&t=rMN1k6T8UkzfulF7uZp-HG_M8btCy0PdJTTIk8ss_oA"
   }
 ];
 
@@ -43,16 +39,18 @@ export default function Equipe() {
       {/* Team Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          <div className="flex flex-wrap justify-center gap-8 lg:gap-12">
             {team.map((member) => (
               <div
                 key={member.name}
-                className="bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-300 text-center"
+                className="bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-300 text-center w-full max-w-md"
               >
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-accent/20 to-accent/5 mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-3xl font-bold text-accent">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
+                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-accent/20 to-accent/5 mx-auto mb-6 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-foreground mb-2">
@@ -78,6 +76,22 @@ export default function Equipe() {
                 </a>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Notre mission
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              La cybersécurité ne devrait pas être réservée aux grandes entreprises.
+              Chez Secalgo, nous rendons la protection numérique <strong className="text-foreground">accessible et compréhensible</strong> pour
+              toutes les structures, quelle que soit leur taille ou leur expertise technique.
+            </p>
           </div>
         </div>
       </section>

@@ -2,152 +2,66 @@ import { Layout } from "@/components/layout/Layout";
 import {
   Shield,
   FileCheck,
-  Lock,
-  Server,
-  Clock,
+  Activity,
+  Phone,
   CheckCircle,
-  Sparkles
+  GraduationCap
 } from "lucide-react";
 
-const technicalPacks = [
-  {
-    icon: Shield,
-    name: "Pack 1 : Hygiène Numérique & Réaction",
-
-    tagline: "Sécurisé en 48h",
-
-    description: "Le pack essentiel pour démarrer votre protection numérique rapidement.",
-    features: [
-      {
-        title: "Audit Flash",
-        details: "Diagnostic rapide et ciblé de l'exposition aux risques sur le périmètre sélectionné"
-      },
-      {
-        title: "Rapport et Préconisation",
-        details: "Synthèse opérationnelle des vulnérabilités identifiées et plan d'action priorisé"
-      },
-      {
-        title: "Sensibilisation équipe",
-        details: "Accompagnement pédagogique de vos collaborateurs aux réflexes de sécurité adaptés"
-      }
-    ]
-  },
+const services = [
   {
     icon: FileCheck,
-    name: "Pack 2 : Audit & Maîtrise",
-
-    tagline: "Visibilité totale et Plan d'action",
-
-    description: "Un audit complet conforme à la méthode EBIOS RM pour une vision exhaustive de votre sécurité.",
+    name: "Pack 1 - Diagnostic d'éligibilité",
+    price: "1 200€ - 1 600€ HT",
+    description: "Analyser les questionnaires clients et identifier les points bloquants pour vos contrats.",
     features: [
-      {
-        title: "Cartographie du SI",
-        details: "Inventaire complet de vos actifs et logiciels"
-      },
-      {
-        title: "Analyse de Risques EBIOS RM",
-        details: "Application de la méthode ANSSI avec scénarios stratégiques et opérationnels"
-      },
-      {
-        title: "Scan de Vulnérabilité",
-        details: "Détection automatisée des failles de sécurité (CVE)"
-      },
-      {
-        title: "Livrables professionnels",
-        details: "Rapport d'audit détaillé et feuille de route budgétée"
-      }
-    ]
-  },
-  {
-    icon: Sparkles,
-    name: "Pack 3 : Secalgo Futur",
-
-    tagline: "Anticipez la menace quantique",
-
-    description: "Protection post-quantique pour anticiper les menaces de demain (Harvest Now, Decrypt Later).",
-    features: [
-      {
-        title: "Pack 2 complet inclus",
-        details: "Tous les éléments de l'audit et maîtrise"
-      },
-      {
-        title: "Inventaire Cryptographique",
-        details: "Recensement des algorithmes (RSA, ECC) et longueurs de clés utilisés"
-      },
-      {
-        title: "Diagnostic Quantique",
-        details: "Estimation de votre dette technique cryptographique face à la menace quantique"
-      },
-      {
-        title: "Plan de Migration PQC",
-        details: "Recommandations basées sur les standards NIST/ANSSI pour la cryptographie post-quantique"
-      }
-    ]
-  }
-];
-
-const complianceServices = [
-  {
-    icon: Lock,
-    name: "Mise en Conformité RGPD",
-
-    description: "Cartographie des données, registre de traitement, et mentions légales conformes.",
-    features: [
-      "Audit de conformité RGPD",
-      "Registre des traitements",
-      "Documentation complète",
-      "Recommandations pratiques"
-    ]
-  },
-  {
-    icon: Server,
-    name: "Préparation NIS2",
-
-    description: "Gap Analysis pour entités Essentielles/Importantes et définition de votre PSSI.",
-    features: [
-      "Analyse d'écart NIS2",
-      "Définition de la PSSI",
-      "Plan de mise en conformité",
-      "Accompagnement réglementaire"
-    ]
-  },
-  {
-    icon: FileCheck,
-    name: "Accompagnement ISO 27001",
-
-    description: "Préparation complète à la certification ISO 27001.",
-    features: [
-      "Analyse de l'existant",
-      "Mise en place du SMSI",
-      "Documentation ISO 27001",
-      "Accompagnement à la certification"
-    ]
-  }
-];
-
-const subscriptions = [
-  {
-    icon: Clock,
-    name: "Abonnement Sérénité",
-
-    description: "Une surveillance continue pour votre tranquillité d'esprit.",
-    features: [
-      "Veille e-réputation automatisée",
-      "Hotline urgence dédiée",
-      "1 check-up annuel inclus",
-      "Alertes en temps réel"
+      "Analyse des questionnaires",
+      "Identification des blocages",
+      "Rapport d'éligibilité"
     ]
   },
   {
     icon: Shield,
-    name: "DPO/RSSI Externalisé",
-
-    description: "Un expert dédié pour maintenir votre conformité en permanence.",
+    name: "Pack 2 - Mise à niveau opérationnelle",
+    price: "2 800€ - 3 500€ HT",
+    description: "Corriger les écarts et produire les preuves de sécurité pour vos partenaires.",
     features: [
-      "Maintien de la conformité",
-      "Veille réglementaire continue",
-      "1/2 journée de conseil mensuel",
+      "Correction des écarts",
+      "Sécurisation contractuelle",
+      "Production de preuves"
+    ]
+  },
+  {
+    icon: Activity,
+    name: "Pack 3 - Suivi & Maintien",
+    price: "1 500€ - 3 000€ HT / an",
+    description: "Pilotage régulier pour éviter les remises à niveau en urgence lors des renouvellements de contrats.",
+    features: [
+      "Pilotage régulier",
+      "Anticipation des renouvellements",
+      "Veille active"
+    ]
+  },
+  {
+    icon: Phone,
+    name: "Pack 4 - Assistance Prioritaire",
+    price: "2 000€ HT / an",
+    description: "Réponse sous 24h en situation sensible (optionnel pour les abonnés Pack 3).",
+    features: [
+      "Réponse sous 24h",
+      "Gestion de crise",
       "Support prioritaire"
+    ]
+  },
+  {
+    icon: GraduationCap,
+    name: "Formation Opérationnelle",
+    price: "1 600€ - 1 800€ HT / jour",
+    description: "Sensibilisation métier et autonomisation des équipes SI pour une sécurité durable.",
+    features: [
+      "Sensibilisation métier",
+      "Autonomisation équipes SI",
+      "Ateliers pratiques"
     ]
   }
 ];
@@ -164,163 +78,56 @@ export default function Services() {
               Nos Services
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              Des solutions de cybersécurité adaptées à chaque étape de votre croissance, du premier diagnostic à l'expertise avancée.
+              Des solutions packagées pour sécuriser vos contrats et pérenniser votre activité.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Packs Techniques */}
+      {/* Packs Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Packs de Sécurité Opérationnelle
+              Notre Offre
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Des prestations packagées et standardisées pour une protection immédiate et efficace.
+              Une approche progressive adaptée à vos enjeux business.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {technicalPacks.map((pack, index) => (
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
+            {services.map((pack) => (
               <div
                 key={pack.name}
-                className="bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-300 flex flex-col"
+                className="bg-card rounded-2xl p-6 shadow-card hover:shadow-glow transition-all duration-300 flex flex-col w-full max-w-sm"
               >
-                <div className="w-14 h-14 rounded-xl gradient-accent flex items-center justify-center mb-6">
-                  <pack.icon className="w-7 h-7 text-accent-foreground" />
+                <div className="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center mb-6">
+                  <pack.icon className="w-6 h-6 text-accent-foreground" />
                 </div>
 
-                <h3 className="text-2xl font-bold text-foreground mb-2 min-h-[4rem]">
+                <h3 className="text-lg font-bold text-foreground mb-2 min-h-[3.5rem]">
                   {pack.name}
                 </h3>
 
-                <p className="text-accent font-semibold mb-2 min-h-[3rem] flex items-center">
-                  {pack.tagline}
+                <p className="text-accent font-bold text-xl mb-4">
+                  {pack.price}
                 </p>
 
-
-
-
-
-                <p className="text-muted-foreground mb-6 min-h-[5rem]">
+                <p className="text-muted-foreground mb-6 flex-grow">
                   {pack.description}
                 </p>
 
-                <div className="space-y-4">
-                  {pack.features.map((feature) => (
-                    <div key={feature.title} className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-semibold text-foreground text-sm">
-                          {feature.title}
-                        </p>
-                        {feature.details && (
-                          <p className="text-xs text-muted-foreground mt-1">
-                            {feature.details}
-                          </p>
-                        )}
-                      </div>
+                <div className="space-y-3 mt-auto">
+                  {pack.features.map((feature, idx) => (
+                    <div key={idx} className="flex gap-2 items-start">
+                      <CheckCircle className="w-4 h-4 text-accent shrink-0 mt-1" />
+                      <span className="text-sm text-muted-foreground">
+                        {feature}
+                      </span>
                     </div>
                   ))}
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services de Conformité */}
-      <section className="py-16 md:py-24 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Gouvernance & Conformité
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Respectez les réglementations en vigueur avec notre accompagnement expert.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {complianceServices.map((service) => (
-              <div
-                key={service.name}
-                className="bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-300"
-              >
-                <div className="w-14 h-14 rounded-xl gradient-accent flex items-center justify-center mb-6">
-                  <service.icon className="w-7 h-7 text-accent-foreground" />
-                </div>
-
-                <h3 className="text-xl font-bold text-foreground mb-2">
-                  {service.name}
-                </h3>
-
-
-
-                <p className="text-muted-foreground mb-6">
-                  {service.description}
-                </p>
-
-                <ul className="space-y-3">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                      <span className="text-sm text-muted-foreground">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Abonnements Récurrents */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Abonnements Récurrents
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Une protection continue pour garantir votre sérénité au quotidien.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {subscriptions.map((subscription) => (
-              <div
-                key={subscription.name}
-                className="bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-300"
-              >
-                <div className="w-14 h-14 rounded-xl gradient-accent flex items-center justify-center mb-6">
-                  <subscription.icon className="w-7 h-7 text-accent-foreground" />
-                </div>
-
-                <h3 className="text-xl font-bold text-foreground mb-2">
-                  {subscription.name}
-                </h3>
-
-
-
-                <p className="text-muted-foreground mb-6">
-                  {subscription.description}
-                </p>
-
-                <ul className="space-y-3">
-                  {subscription.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                      <span className="text-sm text-muted-foreground">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>
